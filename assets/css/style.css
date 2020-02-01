@@ -4301,8 +4301,7 @@ textarea.form-control {
               padding-left: 30px; } }
 
 .navigation {
-  position: relative;
-  color: #fff; }
+  position: relative;}
   .navigation .navigation__column {
     float: left; }
     .navigation .navigation__column.left {
@@ -4311,13 +4310,18 @@ textarea.form-control {
       width: 50%; }
     .navigation .navigation__column.right {
       width: 25%; }
+    .navigation .navigation__column.right .myform{
+      background-color: red;
+      border: 2px solid black;
+    }
   .navigation .center {
     text-align: center; }
-  .navigation .navigation__column.right {
+  .navigation .right {
     text-align: right; }
     .navigation .navigation__column.right .ps-cart__toggle {
       top: 15px; }
     .navigation .navigation__column.right .ps-search--header {
+      width: 100%;
       top: 25px; }
   .navigation .ps-search--header {
     vertical-align: top;
@@ -4843,11 +4847,8 @@ textarea.form-control {
 
 .ps-search--header {
   position: relative;
-  width: 100%;
-  max-width: 260px; }
+  margin-left: 2px;}
   .ps-search--header > input {
-    padding: 0 20px;
-    border: none;
     height: 40px;
     background-color: #e8e8e8;
     -webkit-border-radius: 40px;
@@ -6537,3 +6538,8 @@ html .bg--parallax {
   padding-left: 100px; }
 
 /*# sourceMappingURL=style.css.map */
+@media only screen and (max-width: 1150px){
+  .menu > li > a{
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,157 @@
+doctype //if IE 7
+html.ie.ie7
+//if IE 8
+  html.ie.ie8
+//if IE 9
+  html.ie.ie9
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    // <meta http-equiv="X-UA-Compatible">
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+    meta(name='format-detection', content='telephone=no')
+    |     
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    |     
+    link(href='apple-touch-icon.png', rel='apple-touch-icon')
+    |     
+    link(href='favicon.png', rel='icon')
+    |     
+    meta(name='author', content='Nghia Minh Luong')
+    |     
+    meta(name='keywords', content='Default Description')
+    |     
+    meta(name='description', content='Default keyword')
+    |     
+    title Goldmine - New Product
+    // Fonts
+    link(href='https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900', rel='stylesheet')
+    |     
+    link(rel='stylesheet', href='plugins/bootstrap/dist/css/bootstrap.min.css')
+    |     
+    link(href='https://www.jqueryscript.net/css/jquerysctipttop.css', rel='stylesheet', type='text/css')
+    // Custom
+    link(rel='stylesheet', href='css/style3.css')
+    link(rel='stylesheet', href='css/logo_image.css')
+    link(rel='stylesheet', href='css/footer.css')
+    link(rel='stylesheet', href='css/login_register_form.css')
+    link(rel='stylesheet', href='css/package-card.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    |     
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css', integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU', crossorigin='anonymous')
+
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT', crossorigin='anonymous')
+    |     
+    script(type='text/javascript', src='plugins/jquery/dist/jquery.min.js')
+    |     
+    script(type='text/javascript', src='plugins/bootstrap/dist/js/bootstrap.min.js')
+    |     
+    script(type='text/javascript', src='plugins/jquery-ui/jquery-ui.min.js')
+    |     
+    style.
+      .input-group-addon {
+        padding-right:8%;
+        background-color: green;
+      }
+      .glyphicon {
+        color: white;
+      }
+      .mybtn {
+        background-color: white;
+        width: 250px;
+        font-size: 1.3vw;
+        color: #000000;
+      }
+      .btn .btn-primary .mybtn :hover {
+        background-color: green;
+        color: white;
+      }
+  //if IE 7
+    body.ie7.lt-ie8.lt-ie9.lt-ie10
+  //if IE 8
+    body.ie8.lt-ie9.lt-ie10
+  //if IE 9
+    body.ie9.lt-ie10
+  body
+    .header--sidebar
+    |     
+    header.header
+      nav.navigation
+        .container-fluid
+          .navigation__column.left
+            .header__logo
+              a.ps-logo(href='/home')
+                img.logo_image(src='images/goldmine.png' ,alt='Goldmine Logo')
+          |                 
+          .navigation__column.center
+            ul.main-menu.menu
+              li.menu-item
+                a(href='/home') Home
+              |                         
+              li.menu-item.menu-item-has-children.dropdown
+                a(href='#') Prod
+                |                             
+                ul.sub-menu
+                  li.menu-item
+                    a(href='#') All
+                  |                                 
+                  li.menu-item
+                    a(href='#') Order Groceries
+                  |                                 
+                  li.menu-item
+                    a(href='#') General Stuff
+                  |                                 
+                  li.menu-item
+                    a(href='#') Jobs
+                  |                                 
+                  li.menu-item
+                    a(href='#') Cars
+                  |                                 
+                  li.menu-item
+                    a(href='#') Service
+                  |                                 
+                  li.menu-item
+                    a(href='#') Real Estate
+                  |                                 
+                  li.menu-item
+                    a(href='#') Furniture
+                  |                                 
+                  li.menu-item
+                    a(href='#') Electronics
+                  |                                 
+                  li.menu-item
+                    a(href='#') Fashion
+                  |                                 
+                  li.menu-item
+                    a(href='#') Beauty Products
+                  |                                 
+                  li.menu-item
+                    a(href='#') Farming
+                  |                                 
+                  li.menu-item
+                    a(href='#') Jewellery
+              li.menu-item
+                a(href='/publish') Publish Post
+              li.menu-item.menu-item-has-children.dropdown
+                a(href='#') Hi! haseebbhatti742
+                ul.sub-menu
+                  li.menu-item
+                    a(href='/inbox') Inbox
+                  li.menu-item
+                    a(href='/my-adds') My Adds
+                  li.menu-item
+                    a(href='/profile') View Profile
+                  li.menu-item
+                    a(href='/logout') Logout
+          |                 
+          .navigation__column.right
+            form.ps-search--header(action='do_action', method='post')
+              input.form-control(type='text', placeholder='Search Product…')
+              |                         
+              button
+                i.ps-icon-search
+            |                     
+            .menu-toggle
+              span
+    |     

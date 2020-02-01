@@ -11,22 +11,29 @@ router.post('/',(req,res,next)=>{
 });
 
 router.post("/signup", (req, res, next)=>{
+    res.redirect("/home");
     // var fullname = req.body.fullname;
     // var username = req.body.username;
     // var email = req.body.email;
     // var pass = req.body.pass;
     // var repeatpass = req.body.repeatpass;
     
-    // var query1 = "INSERT INTO users(fullname,username,email,pass) values('"+fullname+"','"+username+"','"+email+"','"+pass+"')";
-    
-    // app.conn.query(query1,(err,result)=>{
+    // var query1 = "SELECT * from users where username = '"+username+"'";
+    // app.conn.query(query1, (err, result1)=>{
     //     if(err) throw err;
-    //     else{ 
-    //         console.log("registered");
+    //     else if(result1.length>0){
+    //         res.render('register-form', {'usernameError':'Username already taken'});
+    //     }
+    //     else{
+    //         var query2 = "INSERT INTO users(fullname,username,email,pass) values('"+fullname+"','"+username+"','"+email+"','"+pass+"')";
+    //         app.conn.query(query2,(err,result)=>{
+    //             if(err) throw err;
+    //             else{ 
+    //                 console.log("registered");
+    //             }
+    //         });
     //     }
     // });
-    res.redirect("/home");
-
 });
 
 router.get("/:username", (req, res, next)=>{

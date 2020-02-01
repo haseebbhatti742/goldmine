@@ -1,5 +1,4 @@
 //libraries
-const http = require('http');
 const express = require('express');
 const app1 = express();
 const bodyParser = require('body-parser');
@@ -15,6 +14,10 @@ app1.use(bodyParser.urlencoded({
     extended:true
 }));
 app1.use(bodyParser.json());
+app1.use(express.static('assets')); 
+
+app1.set('views','./views');
+app1.set('view engine', 'jade');
 
 //session management
 app1.use(session({
@@ -43,6 +46,13 @@ const contactFormRoute = require("./api/routes/contact-form");
 const homeRoute = require("./api/routes/home");
 const profileRoute = require("./api/routes/profile");
 const publishRoute = require("./api/routes/publish");
+const changeppRoute = require("./api/routes/changepp");
+const productDetailRoute = require("./api/routes/product-detail");
+const productDetailRoute1 = require("./api/routes/product-detail1");
+const myAddsRoute = require("./api/routes/my-adds");
+const inboxRoute = require("./api/routes/inbox");
+const policyRoute = require("./api/routes/privacy-policy");
+const termsRoute = require("./api/routes/terms-conditions");
 
 //using routes
 app1.use("/", indexRoute);
@@ -53,7 +63,13 @@ app1.use("/contact-form", contactFormRoute);
 app1.use("/home", homeRoute);
 app1.use("/profile", profileRoute);
 app1.use("/publish", publishRoute);
-
+app1.use("/changepp", changeppRoute);
+app1.use("/product-detail", productDetailRoute);
+app1.use("/product-detail1", productDetailRoute1);
+app1.use("/my-adds", myAddsRoute);
+app1.use("/inbox", inboxRoute);
+app1.use("/privacy-policy", policyRoute);
+app1.use("/terms-conditions", termsRoute)
 
 app1.use('/logout',(req, res, next)=>{
     res.redirect('/');

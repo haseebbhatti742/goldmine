@@ -35,7 +35,7 @@ var WicklowArray= new Array();
 var cat1Array = new Array("General Stuff", "Jobs", "Cars", "Services", "Real Estate", "Furniture", "Electronics", "Fashion", "Beauty Products", "Farming", "Jewellery");
 var GeneralStuffArray = new Array("Clothes / Accessories", "Jewellery / Watches", "Kids / Baby Stuff", "Home & Graden", "Antiques / Collectibles", "Office Furniture & Equipments", "Sports & Leisure", "Computer / Software", "Mobiles & Tablets", "TV / DVD / Vision, Photo", "Audio / Music / Hi-Fi", "Musical Instruments", "Video Games / Consoles", "Books", "Tickets", "Health / Beauty", "Electronics", "Home Furniture", "Other General Stuff");
 var JobsArray = new Array("Advertising / PR", "Bar / Restaurant / Hotel", "Call Center / Customer Service", "Chefs / Cooks / Kitchen" , "Cleaning", "Computer / IT", "Construction / Trade / Engineer" , "Drivers / Security", "Farming / Gsardening", "Hair / Beauty", "Healthcare / Nursing", "Legal / Paralegal", "Media, Design & Creative", "Nanny / Babysitting", "Office / Office Admin", "Part-Time / Evening / Weekend", "Recruitment / HR", "Retail", "Sales / Marketing", "Teaching / Nursery", "Accounting / Finance", "Other Jobs");
-var CarsArray = new Array("Car", "Car parts & Accessories", "Campervas & Caravans", "Vans, Trucks & Trailors", "Motorbikes & Scooters", "Motorbike parts & Accessories", "Boats & Water Sports");
+var CarsArray = new Array("Select Category 2", "Car", "Car parts & Accessories", "Campervas & Caravans", "Vans, Trucks & Trailors", "Motorbikes & Scooters", "Motorbike parts & Accessories", "Boats & Water Sports");
 var ServicesArray = new Array("Cleaners , Cleaning", "Computer & Freelance", "Courses & Training", "Entertainment", "Fitness & Personal Trainers", "Health & Beauty", "Photography & Video", "Property & Shipping", "Removals & Storage", "Tax, Insurance & Financial", "Travel Agents / Vacations", "Wedding & Venues", "Building Services", "Other Services");
 var RealEstateArray = new Array("Flat for Rent", "Flat Sharing", "House for Sale", "House to let", "Flat for Sale", "Holiday Homes", "Parking", "Office to let/sale", "Commercial propoerty for sale/rent", "Other Property");
 var FurnitureArray = new Array("Armchairs", "cabinets", "Bedroom Furniture", "sofa & Suites", "Occasional Furniture", "Office Furniture", "Outdoor Furniture", "Other Furniture");
@@ -65,6 +65,22 @@ function catFunction(){
     else{
         document.getElementById("price_type").disabled = false;
         document.getElementById("prod_price").disabled = false;
+    }
+    if(x == "Cars" && $("#cat1").find(":selected").text() == "Car"){
+        document.getElementById("carDiv").hidden = false;
+    }
+    else{
+        document.getElementById("carDiv").hidden = true;
+    }
+}
+
+function cat2Function(){
+    var x = $("#cat2").find(":selected").text();
+    if(x == "Car"){
+        document.getElementById("carDiv").hidden = false;
+    }
+    else{
+        document.getElementById("carDiv").hidden = true;
     }
 }
 

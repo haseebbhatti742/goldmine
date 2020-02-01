@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+
 //multer for image upload start
 var multer = require('multer');
 var Storage = multer.diskStorage({
     destination: function(req, file, callback) {
-        callback(null, "assets/images/");
+        callback(null, "assets/images/adds/");
     },
     filename: function(req, file, callback) {
         callback(null, file.originalname);
@@ -24,7 +25,7 @@ router.post('/',(req,res,next)=>{
     res.render('product-add');
 });
 
-router.post("/add-product", (req, res, next)=>{
+router.post("/add-product",  (req, res, next)=>{
     upload(req, res, function(err) {
         if (err) throw err;
         return res.end("File uploaded sucessfully!.");

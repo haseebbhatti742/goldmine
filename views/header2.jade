@@ -1,4 +1,4 @@
-doctype html(lang='en')
+doctype //if IE 7
 html.ie.ie7
 //if IE 8
 html.ie.ie8
@@ -8,63 +8,63 @@ html(lang='en')
   head
     meta(charset='utf-8')
     |     
-    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
     |     
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     |     
-    meta(name='format-detection' content='telephone=no')
+    meta(name='format-detection', content='telephone=no')
     |     
-    meta(name='apple-mobile-web-app-capable' content='yes')
+    meta(name='apple-mobile-web-app-capable', content='yes')
     |     
-    link(href='apple-touch-icon.png' rel='apple-touch-icon')
+    link(href='apple-touch-icon.png', rel='apple-touch-icon')
     |     
-    link(href='favicon.png' rel='icon')
+    link(href='favicon.png', rel='icon')
     |     
-    meta(name='author' content='Nghia Minh Luong')
+    meta(name='author', content='Nghia Minh Luong')
     |     
-    meta(name='keywords' content='Default Description')
+    meta(name='keywords', content='Default Description')
     |     
-    meta(name='description' content='Default keyword')
+    meta(name='description', content='Default keyword')
     |     
     title Goldmine - Homepage
     // Fonts
-    link(href='https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900', rel='stylesheet')
     |     
-    link(rel='stylesheet' href='plugins/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='plugins/font-awesome/css/font-awesome.min.css')
     |     
-    link(rel='stylesheet' href='plugins/ps-icon/style.css')
+    link(rel='stylesheet', href='plugins/ps-icon/style.css')
     // CSS Library
-    link(rel='stylesheet' href='plugins/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='plugins/bootstrap/dist/css/bootstrap.min.css')
     |     
-    link(rel='stylesheet' href='plugins/owl-carousel/assets/owl.carousel.css')
+    link(rel='stylesheet', href='plugins/owl-carousel/assets/owl.carousel.css')
     |     
-    link(rel='stylesheet' href='plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css')
+    link(rel='stylesheet', href='plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css')
     |     
-    link(rel='stylesheet' href='plugins/slick/slick/slick.css')
+    link(rel='stylesheet', href='plugins/slick/slick/slick.css')
     |     
-    link(rel='stylesheet' href='plugins/bootstrap-select/dist/css/bootstrap-select.min.css')
+    link(rel='stylesheet', href='plugins/bootstrap-select/dist/css/bootstrap-select.min.css')
     |     
-    link(rel='stylesheet' href='plugins/Magnific-Popup/dist/magnific-popup.css')
+    link(rel='stylesheet', href='plugins/Magnific-Popup/dist/magnific-popup.css')
     |     
-    link(rel='stylesheet' href='plugins/jquery-ui/jquery-ui.min.css')
+    link(rel='stylesheet', href='plugins/jquery-ui/jquery-ui.min.css')
     |     
-    link(rel='stylesheet' href='plugins/revolution/css/settings.css')
+    link(rel='stylesheet', href='plugins/revolution/css/settings.css')
     |     
-    link(rel='stylesheet' href='plugins/revolution/css/layers.css')
+    link(rel='stylesheet', href='plugins/revolution/css/layers.css')
     |     
-    link(rel='stylesheet' href='plugins/revolution/css/navigation.css')
+    link(rel='stylesheet', href='plugins/revolution/css/navigation.css')
     // Custom
-    link(rel='stylesheet' href='css/style.css')
-    link(rel='stylesheet', href='css/logo_image.css')
+    link(rel='stylesheet', href='css/style.css')
     link(rel='stylesheet', href='css/report-add.css')
     link(rel='stylesheet', href='css/footer.css')
-    link(rel='stylesheet', href='css/login_register_form.css')
+    link(rel='stylesheet', href='css/profile.css')
+    link(rel='stylesheet', href='css/logo_image.css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'
     integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
     link(rel="stylesheet", href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'
     integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU' crossorigin='anonymous')
-  
-  body
+
+  body.ps-loading
     .header--sidebar
     |     
     header.header
@@ -72,13 +72,13 @@ html(lang='en')
         .container-fluid
           .navigation__column.left
             .header__logo
-              a.ps-logo(href='/')
-                img.logo_image(src='images/goldmine.png' alt='')
+              a.ps-logo(href='/home')
+                img.logo_image(src='images/goldmine.png', alt='')
           |           
           .navigation__column.center
             ul.main-menu.menu
               li.menu-item
-                a(href='/') Home
+                a(href='/home') Home
               |                   
               li.menu-item.menu-item-has-children.dropdown
                 a(href='#') Prod
@@ -122,27 +122,27 @@ html(lang='en')
                   |                       
                   li.menu-item
                     a(href='#') Jewellery
-              |                   
               li.menu-item
-                a(href='/login-form') Publish Post
-              |                   
-              li.menu-item
-                a(href='/contact-form') Contact
-              |                   
-              li.menu-item
-                a(href='/login-form') Login
-              |                   
-              li.menu-item
-                a(href='/signup-form') SignUp
+                a(href='/publish') Publish Post
+              li.menu-item.menu-item-has-children.dropdown
+                a(href='#') Hi! haseebbhatti742
+                ul.sub-menu
+                  li.menu-item
+                    a(href='/inbox') Inbox
+                  li.menu-item
+                    a(href='/my-adds') My Adds
+                  li.menu-item
+                    a(href='/profile') View Profile
+                  li.menu-item
+                    a(href='/logout') Logout
           |           
           .navigation__column.right
-            form.ps-search--header(action='do_action' method='post')
-              input.form-control(type='text' placeholder='Search Product…')
-              |               
+            form.ps-search--header(action='#', method='post')
+              input.form-control(type='text', placeholder='Search Product…')
               button
                 i.ps-icon-search
             |             
             .menu-toggle
               span
-    |   
+    |     
     |     

@@ -1,0 +1,124 @@
+include header2
+main.ps-main
+  .ps-product--detail.pt-60
+    .ps-container
+      .row
+        .col-lg-10.col-md-12.col-lg-offset-1
+          .ps-product__thumbnail
+            .ps-product__image
+              .item
+                img.zoom(src='images/adds/1.jpg' alt='' data-zoom-image='images/adds/1.jpg')
+          |                         
+          .ps-product__thumbnail--mobile
+            .ps-product__main-img
+              img(src='images/adds/1.jpg' alt='')
+          |                         
+          .ps-product__info
+            h1 Nestle Water Bottle
+            |                             
+            p.ps-product__category
+              | Seller: 
+              a(href='#' style='color: green;')  Haseeb Bhatti
+            |                             
+            h3.ps-product__price &pound; 115
+            |                             
+            .ps-product__block.ps-product__quickview
+              h6 County :
+              h6 Area : 
+              h6 Entered / Renewed : 
+              h6 Ad View : 
+              h6 Ad Watching : 
+            .ps-product__block.ps-product__style
+              ul
+                li
+                  a
+                    img(src='images/adds/1.jpg' alt='')
+                |                                     
+                li
+                  a
+                    img(src='images/adds/1.jpg' alt='')
+                |                                     
+                li
+                  a
+                    img(src='images/adds/1.jpg' alt='')
+                |                                     
+                li
+                  a
+                    img(src='images/adds/1.jpg' alt='')
+            |                             
+            .ps-product__shopping
+              a.ps-btn.mb-10(href='#')
+                | Watch Ad
+                i.ps-icon-next
+          |                         
+          .clearfix
+          |                         
+          .ps-product__content.mt-50
+            ul.tab-list(role='tablist')
+              li.active
+                a(href='#tab_01' aria-controls='tab_01' role='tab' data-toggle='tab') Send Message
+              |                                 
+              li
+                a(href='#tab_02' aria-controls='tab_02' role='tab' data-toggle='tab') FeedBack
+              |                                 
+              li
+                a(href='#tab_03' aria-controls='tab_04' role='tab' data-toggle='tab') Report Ad
+          |                         
+          .tab-content.mb-60
+            #tab_01.tab-pane.active(role='tabpanel')
+              form(method='POST')
+                .form-group
+                  textarea.form-control(rows='2' placeholder='Enter your message for seller here...' required='')
+                |                                 
+                .form-group
+                  button.ps-btn(type='submit') Submit      
+            #tab_02.tab-pane(role='tabpanel')
+              form(method='POST')
+                .form-group
+                  textarea.form-control(rows='2' placeholder='Enter your feedback here...' required='')
+                |                                 
+                .form-group
+                  button.ps-btn(type='submit') Submit
+            |                             
+            #tab_03.tab-pane(role='tabpanel')
+              .container()
+                .row(style='margin-bottom: 10px;')
+                  #div-up1.col-md-8.division-up
+                    span.glyphicon.glyphicon-menu-down(onclick='show1()')
+                    a(type='button' onclick='show1()') Category is wrong
+                  #div1.col-md-8.division(hidden='true')
+                    form(action='#')
+                      input(name='' value='' hidden='true')
+                      textarea(rows='3' placeholder='Type your complain here' required)
+                      button.btn.btn-danger.btn-md Report
+
+                .row(style='margin-bottom: 10px;')
+                  #div-up2.col-md-8.division-up
+                    span.glyphicon.glyphicon-menu-down(onclick='show2()')
+                    a(type='button' onclick='show2()') This Ad is a Duplicate
+                  #div2.col-md-8.division(hidden='true')
+                    form(action='#')
+                      input(name='' value='' hidden='true')
+                      textarea(rows='3' placeholder='Type your complain here' required)
+                      button.btn.btn-danger.btn-md Report
+
+                .row(style='margin-bottom: 10px;')
+                  #div-up3.col-md-8.division-up
+                    span.glyphicon.glyphicon-menu-down(onclick='show3()')
+                    a(type='button' onclick='show3()') Possibly stolen
+                  #div3.col-md-8.division(hidden='true')
+                    form(action='#')
+                      input(name='' value='' hidden='true')
+                      textarea(rows='3' placeholder='Type your complain here' required)
+                      button.btn.btn-danger.btn-md Report
+
+                .row(style='margin-bottom: 10px;')
+                  #div-up4.col-md-8.division-up
+                    span.glyphicon.glyphicon-menu-down(onclick='show4()')
+                    a(type='button' onclick='show4()') This item is sold
+                  #div4.col-md-8.division(hidden='true')
+                    form(action='#')
+                      input(name='' value='' hidden='true')
+                      textarea(rows='3' placeholder='Type your complain here' required)
+                      button.btn.btn-danger.btn-md Report
+include scripts

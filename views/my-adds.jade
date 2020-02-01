@@ -1,0 +1,47 @@
+include header2
+main.ps-main
+  .container(style='margin-top:70px;')
+    table.table
+      thead.thead-dark
+        tr
+          th(scope='col') #
+          th(scope='col') Product Name
+          th(scope='col') Availability
+          th(scope='col') Image
+          th(scope='col') Action
+      tbody
+        tr
+          th(scope='row') 1
+          td Buggati T-Sheyron
+          td 2 
+            br
+            button.btn.btn-success.btn-lg Promote Your Ads
+            button.btn.btn-success.btn-lg Free Jump Ads
+            br
+            button.btn.btn-success.btn-lg Item Sold
+            button.btn.btn-success.btn-lg On Hold
+          td
+            img(style='width:100px; height:100px;' src='images/adds/bugatti.jpg')
+          td
+            button.btn.btn-success.btn-lg Details
+            button.btn.btn-warning.btn-lg Edit
+            button.btn.btn-danger.btn-lg Delete
+
+        tr
+          th(scope='row') 2
+          td Nestle Water Bottle
+          td 20 
+            br
+            button.btn.btn-success Promote Your Ads
+            button.btn.btn-success Free Jump Ads
+            br
+            button.btn.btn-success Item Sold
+            button.btn.btn-success On Hold
+          td
+            img(style='width:100px; height:100px;' src='images/adds/1.jpg')
+          td
+            button.btn.btn-success Details
+            button.btn.btn-warning Edit
+            button.btn.btn-danger Delete                            
+
+include scripts

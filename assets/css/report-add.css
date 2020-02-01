@@ -1,0 +1,38 @@
+.glyphicon{
+    color: green;
+}
+
+.division-up{
+    border:0.5px solid gray;
+    border-radius: 5px;
+}
+
+.division-up a{
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.division-up span{
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.division{
+    height: auto;
+    border:0.5px solid gray;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px;
+}
+
+.division textarea{
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 150%;
+}
+
+.division button{
+
+}
